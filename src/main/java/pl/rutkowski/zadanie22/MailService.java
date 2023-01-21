@@ -16,7 +16,8 @@ public class MailService {
     public void sendMail(MailDto mailDto) {
         SimpleMailMessage mailMessage = new SimpleMailMessage();
         mailMessage.setTo("studiotest@op.pl");
-        mailMessage.setSubject(mailDto.getName());
+        mailMessage.setFrom("studiotest@op.pl");
+        mailMessage.setSubject(mailDto.getName() + " " + mailDto.getEmail());
         mailMessage.setText(mailDto.getContent());
         javaMailSender.send(mailMessage);
     }

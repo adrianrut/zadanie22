@@ -15,16 +15,16 @@
     <form method="post" action="/save">
     <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">Twoje Imię</label>
-        <input name="name" class="form-control" id="exampleFormControlInput1" placeholder="Twoje imię">
+        <input th:name="name" class="form-control" id="exampleFormControlInput1" placeholder="Twoje imię">
     </div>
 
     <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">Adres Email</label>
-        <label for="exampleFormControlInput2"></label><input name="email" class="form-control" id="exampleFormControlInput2" placeholder="adres email">
+        <label for="exampleFormControlInput2"></label><input th:name="email" class="form-control" id="exampleFormControlInput2" placeholder="adres email">
     </div>
     <div class="mb-3">
         <label for="exampleFormControlTextarea1" class="form-label">Twoja wiadomość</label>
-        <textarea class="form-control" name="content" id="exampleFormControlTextarea1" rows="3"></textarea>
+        <textarea class="form-control" th:name="content" id="exampleFormControlTextarea1" rows="3"></textarea>
     </div>
     <div>
         <button type="submit">Wyślij</button>

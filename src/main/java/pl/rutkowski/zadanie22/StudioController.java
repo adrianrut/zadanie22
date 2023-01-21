@@ -30,7 +30,13 @@ public class StudioController {
 
     @PostMapping("/save")
     public String getMessage(MailDto mailDto) {
-        mailService.sendMail(mailDto);
-        return "redirect:success";
+        try {
+            mailService.sendMail(mailDto);
+            return "redirect:success";
+        } catch (Exception e) {
+            return "redirect:error";
+
+        }
+
     }
 }
