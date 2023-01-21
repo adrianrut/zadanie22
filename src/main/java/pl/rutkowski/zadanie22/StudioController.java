@@ -32,11 +32,21 @@ public class StudioController {
     public String getMessage(MailDto mailDto) {
         try {
             mailService.sendMail(mailDto);
-            return "redirect:success";
+            return "redirect:/success";
         } catch (Exception e) {
-            return "redirect:error";
+            return "redirect:/error";
 
         }
 
+    }
+
+    @GetMapping("/success")
+    public String setSuccess() {
+        return "success";
+    }
+
+    @GetMapping("/error")
+    public String setError() {
+        return "error";
     }
 }
