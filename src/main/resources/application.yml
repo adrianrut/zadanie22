@@ -1,0 +1,16 @@
+spring:
+  mail:
+    host: smtp.poczta.onet.pl
+    username: studiotest@op.pl
+    password: Haslotestowe1
+    port: 465
+    properties:
+      smtp:
+        auth: true
+      mail:
+        smtp:
+          ssl:
+            enable: true
+    protocol: smtp
+    default-encoding: UTF-8
+
