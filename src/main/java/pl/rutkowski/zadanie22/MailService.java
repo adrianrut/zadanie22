@@ -13,7 +13,7 @@ public class MailService {
         this.javaMailSender = javaMailSender;
     }
 
-    public void sendMail(MailDto mailDto) {
+    public void getMail(MailDto mailDto) {
         SimpleMailMessage mailMessage = new SimpleMailMessage();
         mailMessage.setTo("studiotest@op.pl");
         mailMessage.setFrom("studiotest@op.pl");
@@ -21,5 +21,16 @@ public class MailService {
         mailMessage.setText(mailDto.getContent());
         javaMailSender.send(mailMessage);
     }
+
+    public void sendMail(MailDto mailDto) {
+        SimpleMailMessage mailMessage = new SimpleMailMessage();
+        mailMessage.setTo(mailDto.getEmail());
+        mailMessage.setFrom("studiotest@op.pl");
+        mailMessage.setSubject("studio odpowiedz");
+        mailMessage.setText("Dziękujemy za kontakt, odezwiemy się niebawem");
+        javaMailSender.send(mailMessage);
+
+    }
+
 
 }
