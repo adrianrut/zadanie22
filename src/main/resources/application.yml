@@ -2,7 +2,7 @@ spring:
   mail:
     host: smtp.poczta.onet.pl
     username: studiotest@op.pl
-    password: Haslotestowe1
+    password: Testowehaslo1
     port: 465
     properties:
       smtp:
