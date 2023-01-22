@@ -26,7 +26,7 @@ public class MailService {
         SimpleMailMessage mailMessage = new SimpleMailMessage();
         mailMessage.setTo(mailDto.getEmail());
         mailMessage.setFrom("studiotest@op.pl");
-        mailMessage.setSubject("studio odpowiedz");
+        mailMessage.setSubject("Otrzymaliśmy Twoją wiadomość");
         mailMessage.setText("Dziękujemy za kontakt, odezwiemy się niebawem");
         javaMailSender.send(mailMessage);
 

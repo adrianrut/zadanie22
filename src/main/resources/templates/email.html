@@ -13,22 +13,24 @@
 <div th:replace="fragments :: header"></div>
 <div class="container" style="margin-top: 40px">
     <form method="post" action="/save">
-    <div class="mb-3">
-        <label for="exampleFormControlInput1" class="form-label">Twoje Imię</label>
-        <input th:name="name" class="form-control" id="exampleFormControlInput1" placeholder="Twoje imię">
-    </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Twoje Imię</label>
+            <input th:name="name" class="form-control" id="exampleFormControlInput1" placeholder="Twoje imię">
+        </div>
 
-    <div class="mb-3">
-        <label for="exampleFormControlInput1" class="form-label">Adres Email</label>
-        <label for="exampleFormControlInput2"></label><input th:name="email" class="form-control" id="exampleFormControlInput2" placeholder="adres email">
-    </div>
-    <div class="mb-3">
-        <label for="exampleFormControlTextarea1" class="form-label">Twoja wiadomość</label>
-        <textarea class="form-control" th:name="content" id="exampleFormControlTextarea1" rows="3"></textarea>
-    </div>
-    <div>
-        <button type="submit">Wyślij</button>
-    </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Adres Email</label>
+            <label for="exampleFormControlInput2"></label><input th:name="email" class="form-control"
+                                                                 id="exampleFormControlInput2"
+                                                                 placeholder="adres email">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Twoja wiadomość</label>
+            <textarea class="form-control" th:name="content" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+        <div>
+            <button type="submit">Wyślij</button>
+        </div>
     </form>
 </div>
 <div th:replace="fragments :: footer"></div>
