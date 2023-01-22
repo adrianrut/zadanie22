@@ -24,6 +24,7 @@ public class MailService {
 
     public void sendMail(MailDto mailDto) {
         SimpleMailMessage mailMessage = new SimpleMailMessage();
+//        mailMessage.setReplyTo(mailDto.getEmail()); kiedy uzywam tej metody, mail nie jest wysylany do podanego maila
         mailMessage.setTo(mailDto.getEmail());
         mailMessage.setFrom("studiotest@op.pl");
         mailMessage.setSubject("Otrzymaliśmy Twoją wiadomość");
